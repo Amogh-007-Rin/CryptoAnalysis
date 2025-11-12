@@ -1,0 +1,28 @@
+name: crypto-market-sentiment-2025
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - nltk
+  - tensorflow
+  - keras
+  - jupyterlab
+  - pip
+  - pip:
+      - plotly
+      - requests
+      - beautifulsoup4
+      - vaderSentiment
+      - xgboost
+      - lightgbm
+      - hyperopt
+      - joblib
+      - mlflow
+      - pytest

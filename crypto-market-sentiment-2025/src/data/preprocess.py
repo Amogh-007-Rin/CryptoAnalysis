@@ -40,6 +40,6 @@ def preprocess_data(file_path):
 
 if __name__ == "__main__":
     # Example usage
-    file_path = '../data/raw/cryptocurrency_data_2025.csv'  # Adjust the path as necessary
+    file_path = 'Dataset/crypto_sentiment_prediction_dataset.csv'  # Adjust the path as necessary
     processed_data = preprocess_data(file_path)
-    processed_data.to_csv('../data/processed/processed_data_2025.csv', index=False)
+    processed_data.to_csv('Dataset/processed_crypto_sentiment_prediction_dataset.csv', index=False)

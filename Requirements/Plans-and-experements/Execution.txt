@@ -1,0 +1,88 @@
+# Execution.txt
+
+## Execution Plan for Cryptocurrency Market Sentiment & Price Data 2025 Analysis
+
+### 1. Data Loading
+- **Objective**: Load the raw dataset into a suitable format for analysis.
+- **Script**: `src/data/load_data.py`
+- **Steps**:
+  - Import necessary libraries (e.g., pandas, numpy).
+  - Define a function to read the raw data files from the `data/raw` directory.
+  - Handle any missing values or inconsistencies during loading.
+  - Save the loaded data into a DataFrame for further processing.
+
+### 2. Data Preprocessing
+- **Objective**: Clean and prepare the data for analysis.
+- **Script**: `src/data/preprocess.py`
+- **Steps**:
+  - Import the loaded data from the previous step.
+  - Perform data cleaning (e.g., removing duplicates, handling missing values).
+  - Normalize and transform features as necessary (e.g., scaling numerical features).
+  - Encode categorical variables using techniques like one-hot encoding.
+  - Save the processed data into the `data/processed` directory.
+
+### 3. Exploratory Data Analysis (EDA)
+- **Objective**: Understand the dataset through visualizations and summary statistics.
+- **Notebook**: `notebooks/01-exploratory-data-analysis.ipynb`
+- **Steps**:
+  - Load the processed data.
+  - Generate summary statistics (mean, median, mode, etc.).
+  - Create visualizations (e.g., histograms, box plots, scatter plots) to identify trends and patterns.
+  - Analyze correlations between sentiment scores and price movements.
+
+### 4. Feature Engineering
+- **Objective**: Enhance the dataset with additional features for modeling.
+- **Notebook**: `notebooks/02-feature-engineering.ipynb`
+- **Steps**:
+  - Identify potential new features (e.g., moving averages, sentiment scores).
+  - Implement feature extraction techniques.
+  - Create new features based on existing data (e.g., lagged variables).
+  - Save the enhanced dataset for modeling.
+
+### 5. Sentiment Analysis
+- **Objective**: Assess market sentiment based on textual data.
+- **Script**: `src/analysis/sentiment_analysis.py`
+- **Steps**:
+  - Load relevant textual data (e.g., news articles, social media posts).
+  - Implement sentiment analysis using libraries like TextBlob or VADER.
+  - Integrate sentiment scores into the main dataset.
+  - Analyze the impact of sentiment on price movements.
+
+### 6. Model Training
+- **Objective**: Train machine learning models to predict cryptocurrency prices.
+- **Script**: `src/models/modeling.py`
+- **Steps**:
+  - Split the dataset into training and testing sets.
+  - Select appropriate machine learning algorithms (e.g., linear regression, decision trees, LSTM).
+  - Train models using the training set.
+  - Tune hyperparameters using techniques like grid search or random search.
+
+### 7. Model Evaluation
+- **Objective**: Evaluate model performance and select the best model.
+- **Steps**:
+  - Use metrics such as RMSE, MAE, and R-squared to assess model performance.
+  - Compare results across different models.
+  - Visualize model predictions against actual values.
+
+### 8. Reporting Findings
+- **Objective**: Summarize the analysis and present findings.
+- **Document**: `reports/final_report.md`
+- **Steps**:
+  - Compile insights from EDA, feature engineering, and model evaluation.
+  - Create visualizations to support findings.
+  - Write a comprehensive report detailing methodologies, results, and recommendations.
+
+### 9. Deployment
+- **Objective**: Deploy the model for real-time predictions.
+- **Script**: `scripts/run_pipeline.sh`
+- **Steps**:
+  - Automate the entire workflow from data loading to model evaluation.
+  - Ensure the script can be executed in a production environment.
+  - Document deployment steps and requirements.
+
+### 10. Future Work
+- **Objective**: Identify areas for further research and analysis.
+- **Ideas**:
+  - Explore additional data sources (e.g., macroeconomic indicators).
+  - Investigate advanced modeling techniques (e.g., ensemble methods).
+  - Conduct scenario simulations to predict future market conditions.
